@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Global Styles Starts */
+
+.main-div{
+  @apply overflow-hidden
+}
+
+.main-heading{
+  @apply text-3xl text-gray-800 font-semibold py-6
+}
+
+
+
+/* Global Styles Ends */
+
+/* Navbar Styles Starts */
+
+.navbar-heading{
+    @apply text-3xl font-bold;
+    text-shadow: 1px 1px 10px ;
+}
+
+.navbar a{
+  @apply text-xl font-semibold m-6
+}
+/* Navbar Styles Ends */
+
+
+/* Hero Styles Starts */
+
+.hero-main{
+  @apply   w-full h-screen bg-[url('/hero-bg-4.jpg')] bg-cover bg-center bg-fixed relative text-white
+}
+
+.black-drop{
+  @apply w-full h-screen bg-black/50 absolute top-0 left-0
+}
+
+.detail-wrapper{
+  @apply   w-full h-full flex flex-col items-center justify-evenly
+}
+
+.hero-heading{
+  @apply text-4xl relative  font-bold
+}
+
+.hero-info{
+}
+
+.heading-1{
+  @apply  text-3xl absolute   left-[22%]  opacity-0 animate-[headingAnimation_12s_1s_infinite] font-semibold md:left-[45%]  
+  
+}
+
+.heading-2{
+  @apply text-3xl absolute   left-[22%]  opacity-0   animate-[headingAnimation_12s_5s_infinite] font-semibold md:left-[45%] 
+  
+}
+
+.heading-3{
+  @apply  text-3xl absolute    left-[22%] opacity-0  animate-[headingAnimation_12s_9s_infinite] font-semibold md:left-[45%] 
+}
+
+
+
+@keyframes headingAnimation {
+  0%{
+    transform: translateY(-7rem);
+    opacity: 0;
+   
+    }
+  
+   6%{
+    transform: translateY(0rem);
+    opacity: 1;
+   }
+  
+    33%{
+      transform: translateY(0rem);
+      opacity: 1;
+    }
+  
+    35%{
+      transform: translateY(4rem);
+      opacity: 0;
+    }
+  
+    100%{
+      transform: translateY(4rem);
+      opacity: 0;
+    }
+}
+
+/* Hero Styles Ends */
+
+
+/* Services Styles Starts */
+
+.service-main{
+  @apply w-full bg-gray-200 
+}
+
+.service-wrapper{
+  @apply max-w-[1240px]  flex flex-col items-center mx-auto
+}
+
+
+
+.service-card{
+  @apply border  flex flex-col  items-center justify-around md:flex-row md:my-10 md:bg-white 
+}
+
+.service-img{
+  @apply rounded-t-[20%] rounded-br-[20%] md:rounded-tl-none
+}
+
+.service-details{
+  @apply flex flex-col items-center py-6  mx-1 md:mx-4
+}
+
+.service-details h2{
+  @apply text-3xl py-2 font-semibold 
+}
+
+.service-details p{
+  @apply text-lg font-medium 
+}
+
+
+/* Services Styles Ends */
+
+
+
+/* Contacts Styles Stars */
+
+.contact-main{
+  @apply w-full h-[70%] 
+}
+
+.contact-wrapper{
+  @apply max-w-[1240px] w-full flex flex-col items-center justify-around py-6 mx-auto 
+}
+
+.contact-card{
+  @apply relative w-full h-full border-2   shadow-2xl md:flex md:p-6 rounded-3xl md:bg-gradient-to-r from-purple-500 to-blue-600
+}
+
+.contact-img-div{
+  @apply  w-full h-full bg-blue-200
+}
+
+.contact-img-div img{
+  @apply  w-[700px] 
+}
+
+.contact-form{
+  @apply flex flex-col md:absolute md:top-[10%] md:left-[40%] md:w-[50%]
+}
+
+.contact-form input{
+  @apply border-2 m-2 p-2 rounded-3xl text-xl
+}
+
+.contact-form textarea{
+  @apply border-2 m-2 p-2 rounded-3xl text-xl
+}
+
+.contact-form input[type=submit]{
+  @apply mx-auto p-4 px-6 cursor-pointer bg-gradient-to-tr from-blue-500 to-slate-400 font-semibold text-gray-900
+}
+
+/* Contacts Styles Ends */
+
+/* Review Styles Starts */
+
+.review-main{
+  @apply w-full h-[70%]  
+}
+
+.review-wrapper{
+  @apply max-w-[1240px] w-full mx-auto flex flex-col items-center my-6 md:flex-row md:justify-between relative
+}
+
+.heading-main{
+  @apply my-4 
+}
+
+.swiper-main{
+  @apply mx-4 md:mx-0 
+}
+
+.swiper {
+  @apply w-full 
+}
+
+.swiper-slide {
+  @apply  w-[300px] h-[300px] 
+}
+
+.slide-main{
+  @apply w-[300px] h-[300px] 
+}
+
+.slide-detail{
+  @apply flex flex-col items-center gap-6
+}
+.slide-detail i{
+  @apply text-8xl bg-black text-white w-[8rem] h-[8rem] flex items-center justify-center rounded-3xl
+}
+
+.slide-detail h3{
+  @apply text-3xl font-semibold 
+}
+
+.slide-detail p{
+  @apply text-lg font-medium w-[70%] px-4 text-center
+}
+
+
+
+
+
+
+
+
+
+
+/* Review Styles Ends */
+
+
+
+/* Admin Navbar styles Starts */
+
+.admin-nav-main{
+  @apply w-full h-[80px] bg-blue-500 fixed top-0 left-0
+}
+
+.admin-nav-wrapper{
+  @apply w-full h-full flex justify-between items-center
+}
+
+.admin-nav-heading{
+  @apply text-3xl font-bold text-gray-800 mx-4
+}
+
+.notify-main{
+  @apply relative bg-black text-white rounded-3xl
+}
+
+.fa-bell{
+  @apply text-5xl mx-4
+}
+
+.notify-main h3{
+@apply text-2xl absolute top-0 right-2
+}
+
+/* Nav Notify BackDrop Starts*/
+
+.notify-backdrop-show{ 
+  @apply mt-[80px] w-full h-screen bg-black/80 absolute top-0 left-0 transition-all duration-300 
+}
+
+.notify-backdrop-hide{
+  @apply left-[-100%] hidden transition-all duration-300
+}
+
+.notify-card-wrapper{
+@apply w-[80%]  mx-auto my-2 
+}
+
+.notify-card{
+  @apply bg-white w-full  p-4 my-3 rounded-3xl flex flex-col items-center 
+}
+
+.client-detail{
+  @apply w-full flex justify-evenly text-xl font-bold
+}
+
+.client-msg p{
+  @apply text-lg font-semibold
+}
+
+
+
+
+/* Nav Notify BackDrop Ends*/
+
+/* Admin Navbar styles Ends */
+
+/* Admin Menu Div Styles Start */
+
+.admin-menu-wrapper{
+  @apply mt-[80px] h-[60px] bg-gray-200 text-amber-900 font-bold text-xl flex justify-evenly items-center
+}
+
+.menu-btn-div{
+  @apply bg-blue-800 text-white p-2 rounded-2xl cursor-pointer
+}
+
+/* Admin Menu Div Styles Ends */
+
+
+/* Admin Form Styles Starts */
+
+.admin-form-main{
+  @apply   flex flex-col items-center py-10 mx-4
+}
+
+.admin-heading{
+  @apply text-3xl font-semibold text-gray-600 
+}
+
+.admin-form{
+  @apply w-full h-[50%] my-8 flex flex-col gap-6 items-center bg-amber-200 py-10 rounded-3xl shadow-2xl  
+}
+
+.admin-form input{
+  @apply border border-blue-900 p-2 text-xl font-semibold placeholder:text-gray-700
+}
+
+.admin-form input[type=submit]{
+  @apply bg-blue-900 text-white cursor-pointer rounded-2xl px-4 shadow-2xl
+}
+
+
+/* Admin Form Styles Ends */
+
+/* Admin All Work Styles Starts */
+
+.work-main{
+  @apply mt-6 mx-2 
+}
+
+.work-wrapper{
+  @apply w-full text-xl font-semibold bg-gray-100 pt-6 px-2 flex flex-col gap-4
+}
+
+.work-card{
+  @apply bg-blue-200 text-gray-600 text-center
+}
+
+
+
+
+/* Admin All Work Styles Ends */
